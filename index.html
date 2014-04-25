@@ -1,0 +1,110 @@
+<html>
+<head>
+	<title>Tom Chen</title>
+	<link rel="stylesheet" type="text/css" href="style/index.css">
+</head>
+<body>
+
+	<div class="linkBar">
+		<img class="links goToSlides"href="#" data-target="slide2" onclick="return false" src="image/me.png"></img></a>
+		<img class="links goToSlides"href="#" data-target="slide3" onclick="return false" src="image/work.png"></img></a>
+		<img class="links" src="image/resumeIcon.png"></img>
+		<a target="_blank" href="https://www.linkedin.com/in/senluchen"><img class="links" src="image/linkedinIcon.png"></img></a>
+		<a target="_blank" href="https://github.com/senluchen2015"><img class="links" src="image/githubIcon.png"></img></a>
+	</div>
+	
+	<div class="slide1" id="slide1"> 
+		<div class="nameWrapper">
+			<img class="name" src="image/name.png"></img>
+		</div>
+		<div class="buttons">
+				<button class="homeButton goToSlides" href="#" data-target="slide2" onclick="return false">About Me</button>
+				<button class="homeButton goToSlides" href="#" data-target="slide3" onclick="return false">My Works</button>			
+		</div>
+	</div>
+
+	<div class="slide2" id="slide2">
+		<div class="profileWrapper">
+			<img class="profileImage" src="image/profileImage.jpg"></img>
+		</div>
+		<div class="about">
+			<div class="aboutText">
+				I am a computer science major at Northwestern University with experience in web and mobile development and concerntration in artificial intelligence and system 
+			</div>
+		</div>
+	</div>
+
+	<div class="slide3" id="slide3">
+		<br>
+		<div class="headerWrapper">
+		<img class="headerProject" src="image/webapplications.png"></img></div>
+		<div class="projectWrapper">
+			<div class="project">
+				 <a target="_blank" href="http://newstube.herokuapp.com"
+				 ><img class="imageThumbnail" src="image/newstube.png"></img></a>
+				 <div class="projectTitle"><a target="_blank" href="http://newstube.herokuapp.com">NewsTube</a></div>
+				 <div class="projectDescription">
+					Newstube is a news video search interface designed for journalists to find relavent news video efficiently.
+					Built as part of the <a target="_blank" href="http://projects.knightlab.com/">Northwestern Knight Lab</a>, 
+					more information can be found <a target="_blank" href="http://projects.knightlab.com/projects/newstube">here</a><br></br>
+					Technologies Used: Ruby on Rails, Youtube API, Twitter API
+				 </div>
+			</div>		
+		</div>
+		<div class="projectWrapper">
+			<div class="project">
+				 <a target="_blank" href="https://sites.google.com/a/u.northwestern.edu/wikipredict/">
+				 <img class="imageThumbnail" src="image/wikipredict.png"></img></a>
+				 <div class="projectTitle"><a target="_blank" href="https://sites.google.com/a/u.northwestern.edu/wikipredict/">WikiPredict</a></div>
+				 <div class="projectDescription">
+					Wikipredict is a machine learning project that leaverage learning algorithm such as regression and neural net to predict future Wikipedia pages view counts. More
+					specifically, we looked at top musicians and artists and even looked at correlation with respective Spanish Wikipedia pages.
+					Extended paper can be found <a target="_blank" href="https://docs.google.com/a/u.northwestern.edu/viewer?a=v&pid=sites&srcid=dS5ub3J0aHdlc3Rlcm4uZWR1fHdpa2lwcmVkaWN0fGd4OjMxM2M2MDA1NWVjNGFhMDc">
+					here</a><br></br>
+					Technologies Used: Matlab, Shell Script
+				 </div>
+			</div>		
+		</div>
+		<div class="headerWrapper">
+		<img class="headerProject" src="image/mobileapplications.png"></img></div>
+		<div class="projectWrapper">
+			<div class="project">
+				 <a target="_blank" href="http://www.shindg.com">
+				 <img class="imageThumbnail" src="image/shindglogo.png"></img></a>
+				 <div class="projectTitle"><a target="_blank" href="https://itunes.apple.com/us/app/shindg/id854008976?mt=8">Shindg</a></div>
+				 <div class="projectDescription">
+					Shindg is a social event planner for people to organize event act as a social calendar. This app is made as part of Nuvention Web at Northwestern University.
+					The app is available at the <a target="_blank" href="https://itunes.apple.com/us/app/shindg/id854008976?mt=8"> app store </a>. Press information can be found 
+					<a target="_blank" href="http://fcei.northwestern.edu/blogs/entry/nuvention-web-winter-2014.html">here</a>
+					<br></br>
+					Technologies Used: IOS7, Objective C
+				 </div>
+			</div>		
+		</div>
+	</div>
+
+	<div class="slide4">
+	<div class="contactWrapper">
+		<h1>Contact Me!</h1>
+		<div class="email"><a href="mailto:senlutomchen@gmail.com">senlutomchen@gmail.com</a></div>
+		<button class="homeButton goToSlides" href="#" data-target="slide1" onclick="return false">Back to Top</button>
+		<div class="footer">
+		&copy 2014 Tom Sen Lu Chen
+		</div>
+	</div>
+	</div>
+	
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<script>
+	$(function(){    
+	$('.goToSlides').on('click', function(event){
+	    event.preventDefault();
+		var target= "#" + $(this).data('target');
+		 $('html, body').animate({
+        scrollTop: $(target).offset().top
+    }, 500);
+	});
+	});
+	</script>
+</body>
+</html>
